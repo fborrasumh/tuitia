@@ -1,0 +1,114 @@
+<div class="topbar">
+  <div class="tb-in">
+    <button class="logo" id="goHome" type="button" aria-label="Inicio" data-i18n-attr="aria-label:Inicio"><span class="anv"><svg class="i"><use href="#i-chat"/></svg></span><span>Tuit<em>IA</em></span></button>
+    <nav class="stepper" id="stepper" aria-label="Pasos" data-i18n-attr="aria-label:Pasos"></nav>
+    <div class="tb-tools"><div class="tb-lang" id="langBox"><select id="selLang" class="tb-sel" aria-label="Idioma" data-i18n-attr="aria-label:Idioma"></select></div><button class="tb-btn" id="btnIA" type="button"><svg class="i"><use href="#i-key"/></svg><span class="lbl" data-i18n="IA">IA</span></button><button class="tb-btn" id="btnHelp" type="button"><svg class="i"><use href="#i-help"/></svg><span class="lbl" data-i18n="Ayuda">Ayuda</span></button></div>
+  </div>
+  <div class="progress"><span id="progBar"></span></div>
+</div>
+
+<main id="app">
+<!-- 0 · INICIO: portada con el qué, el para quién y los autores -->
+<section class="screen" data-step="0">
+  <div class="hero">
+    <p class="eyebrow" data-i18n="hero.eyebrow">Docencia con tuits verificados · Universidad Miguel Hernández de Elche</p>
+    <h1 data-i18n="hero.h1">Tu guion de clase, <em>reforzado con tuits reales</em></h1>
+    <p class="lede" data-i18n="hero.lede">Pega el guion de tu clase: la IA separa sus ideas y te propone dónde buscar en X los tuits que las refuerzan. El código comprueba que cada tuit existe y dice lo que la IA afirma, y monta las diapositivas para presentar o descargar en PowerPoint.</p>
+    <div class="actions"><button class="btn btn-primary btn-big" id="btnStart" type="button"><svg class="i"><use href="#i-play"/></svg><span data-i18n="s.empezar">Empezar</span></button><button class="btn btn-ghost btn-big" id="btnEjemplo" type="button"><svg class="i"><use href="#i-eye"/></svg><span data-i18n="s.ejemplo">Ver un ejemplo</span></button></div>
+    <p class="fa-inicio" id="inicioProj"></p>
+    <div class="fa-autores"><span class="fa-autores-cap" data-i18n="Realizada por">Realizada por</span>
+      <div class="fa-autor"><span class="fa-av" style="--c:#E4572E">FB</span><div><b>Fernando Borrás Rocher</b><small>Universidad Miguel Hernández de Elche</small><a class="fa-orcid" href="https://orcid.org/0000-0002-5519-4573" target="_blank" rel="noopener">ORCID 0000-0002-5519-4573</a></div></div>
+      </div>
+  </div>
+  <h2 class="sec-title" data-i18n="Cómo funciona">Cómo funciona</h2>
+  <div class="journey" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
+    <div class="jstop" style="--c:#6B4FD8"><span class="jn">1</span><div class="ji"><svg class="i"><use href="#i-pencil"/></svg></div><b data-i18n="s.j1b">Pegas tu guion</b><span data-i18n="s.j1s">O subes el Word, PDF o PowerPoint de tu clase.</span></div>
+    <div class="jstop" style="--c:#E4572E"><span class="jn">2</span><div class="ji"><svg class="i"><use href="#i-target"/></svg></div><b data-i18n="s.j2b">Ideas y búsquedas</b><span data-i18n="s.j2s">La IA separa las ideas y prepara búsquedas en X para cada una.</span></div>
+    <div class="jstop" style="--c:#1F6FB2"><span class="jn">3</span><div class="ji"><svg class="i"><use href="#i-check"/></svg></div><b data-i18n="s.j3b">Tuits comprobados</b><span data-i18n="s.j3s">Pegas los enlaces; el código comprueba que existen y que dicen lo que la IA afirma.</span></div>
+    <div class="jstop" style="--c:#0E8C7A"><span class="jn">4</span><div class="ji"><svg class="i"><use href="#i-monitor"/></svg></div><b data-i18n="s.j4b">Presentas o descargas</b><span data-i18n="s.j4s">A pantalla completa, en PowerPoint con notas o en PDF.</span></div>
+  </div>
+  <h2 class="sec-title" data-i18n="Dónde va cada cosa">Dónde va cada cosa</h2>
+  <div class="zonas"><div class="zona l"><h4 data-i18n="Siempre en tu ordenador">Siempre en tu ordenador</h4><ul data-i18n="s.zl">
+<li>Tu guion, tus diapositivas y las capturas, guardados en este navegador</li><li>Tus claves de IA y de capturas</li><li>El dibujo de las tarjetas, las comprobaciones y las descargas</li></ul></div>
+    <div class="zona n"><h4 data-i18n="Sale hacia tu proveedor de IA">Sale hacia tu proveedor de IA</h4><ul data-i18n="s.zn">
+<li>El guion, con los datos personales enmascarados, si pides separarlo con IA</li><li>Las ideas y el texto de los tuits, si pides valorarlos o buscarlos</li><li>Antes del primer envío ves lo que sale</li></ul></div>
+    <div class="zona n"><h4 data-i18n="s.zt.h">Sale hacia servicios de tuits y capturas</h4><ul data-i18n="s.zt">
+<li>El número de cada tuit que añades, para leer sus datos públicos (FxTwitter, vxTwitter o X)</li><li>Solo si pides una captura real: el enlace del tuit, a la API de capturas que elijas</li></ul></div></div>
+</section>
+
+<!-- 1 · GUION -->
+<section class="screen" data-step="1">
+  <header class="sh" style="--c:#6B4FD8"><div class="sh-ico"><svg class="i"><use href="#i-pencil"/></svg></div><div><p class="sh-step" data-i18n="s.paso1">Paso 1 de 5</p><h2 data-i18n="s.guion.h">Tu guion de clase</h2><p class="sh-lede" data-i18n="s.guion.lede">Pega el guion o los apuntes de la sesión, o sube el fichero. La IA lo separará en ideas y, para cada una, propondrá búsquedas en X.</p></div></header>
+  <div class="card">
+    <div class="grid2"><div class="field"><label for="tituloPres" data-i18n="s.tit">Título de la presentación</label><input type="text" id="tituloPres" maxlength="140" placeholder="Por ejemplo: Desinformación en redes" data-i18n-attr="placeholder:s.tit.ph"></div>
+      <div class="field"><label for="cursoPres" data-i18n="s.curso">Asignatura, grupo o fecha (opcional)</label><input type="text" id="cursoPres" maxlength="140"></div></div>
+    <div class="field"><label for="guion" data-i18n="s.guion">Guion</label><textarea id="guion" rows="12" placeholder="Pega aquí el guion de tu clase…" data-i18n-attr="placeholder:s.guion.ph"></textarea></div>
+    <div class="actions" style="margin-top:6px"><label class="btn btn-ghost btn-sm" for="fGuion"><svg class="i"><use href="#i-upload"/></svg><span data-i18n="s.subir">Subir Word, PDF o PowerPoint</span></label><input type="file" id="fGuion" accept=".docx,.pdf,.pptx,.txt,.md" hidden><span class="help" id="guionInfo"></span></div>
+    <div class="actions"><button class="btn btn-primary" id="btnIdeasIA" type="button"><svg class="i"><use href="#i-sparkles"/></svg><span data-i18n="s.ideasIA">Separar en ideas con IA</span></button><button class="btn btn-ghost" id="btnIdeasManual" type="button"><span data-i18n="s.ideasMan">Separar sin IA: una idea por párrafo</span></button></div>
+    <p class="help" id="estadoGuion" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- 2 · IDEAS Y BÚSQUEDAS -->
+<section class="screen" data-step="2">
+  <header class="sh" style="--c:#E4572E"><div class="sh-ico"><svg class="i"><use href="#i-target"/></svg></div><div><p class="sh-step" data-i18n="s.paso2">Paso 2 de 5</p><h2 data-i18n="s.ideas.h">Ideas y búsqueda de tuits</h2><p class="sh-lede" data-i18n="s.ideas.lede">Para cada idea tienes búsquedas preparadas para X. Ábrelas (con tu sesión de X), elige los tuits que te sirvan y pega aquí sus enlaces. El código comprueba que cada tuit existe.</p></div></header>
+  <div id="ideas"></div>
+  <div class="actions"><button class="btn btn-ghost" id="btnIdeaNueva" type="button"><svg class="i"><use href="#i-plus"/></svg><span data-i18n="s.ideaNueva">Añadir una idea</span></button></div>
+</section>
+
+<!-- 3 · TUITS -->
+<section class="screen" data-step="3">
+  <header class="sh" style="--c:#1F6FB2"><div class="sh-ico"><svg class="i"><use href="#i-chat"/></svg></div><div><p class="sh-step" data-i18n="s.paso3">Paso 3 de 5</p><h2 data-i18n="s.tuits.h">Tus tuits</h2><p class="sh-lede" data-i18n="s.tuits.lede">Revisa cada tuit, decide si entra en la presentación y elige su imagen: la tarjeta dibujada aquí (sin cuota), una captura real con tu API de capturas o tu propia captura.</p></div></header>
+  <div class="card"><h3 data-i18n="s.val.h">¿Refuerza cada tuit su idea?</h3>
+    <p class="help" style="margin-top:0" data-i18n="s.val.help">La IA valora el encaje de cada tuit con su idea, señala la frase clave y propone título y notas. El código comprueba que la frase clave está de verdad en el tuit. Tú decides qué entra.</p>
+    <div class="actions"><button class="btn btn-primary" id="btnValora" type="button"><svg class="i"><use href="#i-sparkles"/></svg><span data-i18n="s.valorar">Valorar los tuits con IA</span></button></div><p class="help" id="estadoVal" role="status" aria-live="polite"></p></div>
+  <div class="card"><h3 data-i18n="s.tarj.h">Aspecto de las tarjetas</h3>
+    <div class="grid2"><div class="field"><label for="temaTarj" data-i18n="s.temaTarj">Tema de la tarjeta</label><select id="temaTarj"><option value="claro" data-i18n="Claro">Claro</option><option value="oscuro" data-i18n="Oscuro">Oscuro</option></select></div>
+      <div class="field"><span class="fa-lab" data-i18n="s.resaltar.h">Frase clave</span><label class="fa-chk"><input type="checkbox" id="resalta"> <span data-i18n="s.resaltar">Resaltar la frase clave verificada</span></label></div></div></div>
+  <details class="card fa-cap" id="capBox"><summary><h3 data-i18n="s.cap.h">Capturas reales (opcional)</h3></summary>
+    <p class="help" data-i18n="s.cap.help">Si prefieres la imagen exacta de X, la app pide una captura de la versión incrustada del tuit a una API de capturas con tu clave. Cada tuit se captura una sola vez y se guarda en este navegador, para no gastar tu cuota gratuita.</p>
+    <div class="grid3"><div class="field"><label for="capProv" data-i18n="s.cap.prov">Servicio</label><select id="capProv"></select></div>
+      <div class="field"><label for="capKey" data-i18n="s.cap.key">Clave del servicio</label><div class="keyrow"><input type="password" id="capKey" autocomplete="off"><button class="eye" id="capEye" type="button" aria-label="Ver" data-i18n-attr="aria-label:Ver"><svg class="i"><use href="#i-eye"/></svg></button></div></div>
+      <div class="field"><label for="capLim" data-i18n="s.cap.lim">Tu cuota gratuita</label><input type="number" id="capLim" min="1" max="100000"></div></div>
+    <p class="help" id="capUso" role="status"></p>
+    <div class="actions"><button class="btn btn-ghost btn-sm" id="btnCapTodos" type="button"><svg class="i"><use href="#i-eye"/></svg><span data-i18n="s.cap.todos">Capturar los tuits incluidos que aún no tienen captura</span></button></div></details>
+  <div id="listaTuits"></div>
+  <input type="file" id="fPropia" accept="image/*" hidden>
+</section>
+
+<!-- 4 · DIAPOSITIVAS -->
+<section class="screen" data-step="4">
+  <header class="sh" style="--c:#0E8C7A"><div class="sh-ico"><svg class="i"><use href="#i-grid"/></svg></div><div><p class="sh-step" data-i18n="s.paso4">Paso 4 de 5</p><h2 data-i18n="s.diapos.h">Diapositivas</h2><p class="sh-lede" data-i18n="s.diapos.lede">Así queda la presentación. Cambia el orden de ideas y tuits en los pasos anteriores; aquí puedes elegir el tema y ocultar diapositivas.</p></div></header>
+  <div class="card"><div class="grid3"><div class="field"><label for="temaPres" data-i18n="s.temaPres">Tema de la presentación</label><select id="temaPres"><option value="claro" data-i18n="Claro">Claro</option><option value="oscuro" data-i18n="Oscuro">Oscuro</option></select></div>
+    <div class="field"><span class="fa-lab" data-i18n="s.incluir">Incluir</span><label class="fa-chk"><input type="checkbox" id="diapoIdea"> <span data-i18n="s.diapoIdea">Una diapositiva de presentación por idea</span></label><label class="fa-chk"><input type="checkbox" id="diapoFuentes"> <span data-i18n="s.diapoFuentes">Diapositiva final de fuentes</span></label></div>
+    <div class="field"><span class="fa-lab" data-i18n="s.resumen">Resumen</span><p class="help" id="resDiapos" style="margin:0"></p></div></div></div>
+  <div class="fa-minis" id="miniaturas"></div>
+</section>
+
+<!-- 5 · PRESENTAR Y DESCARGAR -->
+<section class="screen" data-step="5">
+  <header class="sh" style="--c:#C98200"><div class="sh-ico"><svg class="i"><use href="#i-play"/></svg></div><div><p class="sh-step" data-i18n="s.paso5">Paso 5 de 5</p><h2 data-i18n="s.pres.h">Presentar y descargar</h2><p class="sh-lede" data-i18n="s.pres.lede">Presenta desde aquí a pantalla completa o descarga la presentación para abrirla en PowerPoint, Keynote, LibreOffice o Google Slides.</p></div></header>
+  <div class="card"><h3 data-i18n="s.presentar.h">Presentar</h3><p class="help" style="margin-top:0" data-i18n="s.presentar.help">Flechas o espacio para avanzar, N para ver tus notas, Esc para salir.</p>
+    <div class="actions"><button class="btn btn-primary btn-big" id="btnPresentar" type="button"><svg class="i"><use href="#i-play"/></svg><span data-i18n="s.presentar">Presentar a pantalla completa</span></button></div></div>
+  <div class="card"><h3 data-i18n="Descargar">Descargar</h3>
+    <div class="actions" style="margin-top:0"><button class="btn btn-word" id="btnPptx" type="button"><svg class="i"><use href="#i-download"/></svg>PowerPoint</button><button class="btn btn-ghost" id="btnPdf" type="button"><svg class="i"><use href="#i-print"/></svg><span data-i18n="s.pdf">PDF (imprimir)</span></button><button class="btn btn-ghost" id="btnCsv" type="button"><span data-i18n="s.csv">Fuentes (CSV)</span></button></div>
+    <p class="help" data-i18n="s.descargas.help">El PowerPoint lleva los títulos como texto editable, cada tuit como imagen con su enlace y tus notas en las notas del orador. Para el PDF, elige «Guardar como PDF» en la ventana de impresión.</p></div>
+  <div class="card"><h3 data-i18n="s.proy.h">Proyecto</h3><p class="help" style="margin-top:0" data-i18n="s.proy.help">Tu trabajo se guarda solo en este navegador. Descárgalo para llevarlo a otro ordenador o compartirlo con un colega (nunca incluye tus claves).</p>
+    <div class="actions"><button class="btn btn-ghost" id="btnJson" type="button"><svg class="i"><use href="#i-save"/></svg><span data-i18n="s.json">Descargar proyecto</span></button><label class="btn btn-ghost" for="fJson"><svg class="i"><use href="#i-upload"/></svg><span data-i18n="s.abrir">Abrir proyecto</span></label><input type="file" id="fJson" accept=".json,application/json" hidden><button class="btn btn-ghost" id="btnNuevo" type="button"><svg class="i"><use href="#i-trash"/></svg><span data-i18n="s.nuevo">Empezar una presentación nueva</span></button></div></div>
+</section>
+</main>
+<div class="fa-pres" id="pres" role="dialog" aria-modal="true" aria-label="Presentación" data-i18n-attr="aria-label:Presentación"><div class="fa-pres-esc" id="presEsc"></div><div class="fa-pres-notas" id="presNotas" hidden></div><div class="fa-pres-bar"><button type="button" id="presAnt" aria-label="Anterior" data-i18n-attr="aria-label:Anterior"><svg class="i"><use href="#i-left"/></svg></button><span id="presNum"></span><button type="button" id="presSig" aria-label="Siguiente" data-i18n-attr="aria-label:Siguiente"><svg class="i"><use href="#i-right"/></svg></button><button type="button" id="presNotasBtn" data-i18n="Notas">Notas</button><button type="button" id="presSalir" data-i18n="Salir">Salir</button></div></div>
+<div id="imprime" aria-hidden="true"></div>
+
+<footer class="fa-foot"><hr><p><b>TuitIA</b> · Fernando Borrás Rocher · Universidad Miguel Hernández de Elche. <span data-i18n="f.pie">Herramienta de apoyo: la IA puede equivocarse y la decisión final es tuya. Tus datos se guardan solo en este navegador. TuitIA no está vinculada a X Corp.: cita siempre al autor de cada tuit y enlaza el original.</span></p></footer>
+<div class="bottomnav"><div class="bn-in"><button class="btn btn-ghost" id="navBack" type="button"><svg class="i"><use href="#i-left"/></svg><span data-i18n="Atrás">Atrás</span></button><div class="bn-hint" id="navHint"></div><button class="btn btn-primary" id="navNext" type="button"><span id="navNextTxt">Siguiente</span><svg class="i"><use href="#i-right"/></svg></button></div></div>
+
+<div class="modal" id="mIA" role="dialog" aria-modal="true" aria-labelledby="mIAT"><div class="modal-box"><div class="modal-head"><h2 id="mIAT" data-i18n="Inteligencia artificial">Inteligencia artificial</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body">
+  <div class="field"><label for="selProv" data-i18n="Proveedor">Proveedor</label><select id="selProv"><option value="openai">OpenAI</option><option value="gemini">Google Gemini</option><option value="anthropic">Anthropic Claude</option></select></div>
+  <div class="field"><label for="apiKey" data-i18n="Tu clave de API">Tu clave de API</label><div class="keyrow"><input type="password" id="apiKey" autocomplete="off"><button class="eye" id="btnEye" type="button" aria-label="Ver" data-i18n-attr="aria-label:Ver"><svg class="i"><use href="#i-eye"/></svg></button></div></div>
+  <div class="field"><label for="selModelo" data-i18n="Modelo">Modelo</label><select id="selModelo"></select><input type="text" id="modelo" hidden autocomplete="off" placeholder="Escribe el nombre exacto del modelo" data-i18n-attr="placeholder:Escribe el nombre exacto del modelo" style="margin-top:8px"></div>
+  <div class="actions"><button class="btn btn-ghost btn-sm" id="btnModelos" type="button" data-i18n="Ver los modelos de mi clave">Ver los modelos de mi clave</button></div>
+  <p class="help" id="iaEstado" data-i18n="f.ia.ayuda">La clave se guarda solo en este navegador y se envía únicamente a tu proveedor. Cada persona usa la suya y paga su propio uso. Elige un modelo económico: este uso no necesita el más potente.</p></div></div></div>
+<div class="modal" id="mEnvio" role="dialog" aria-modal="true" aria-labelledby="mEnT"><div class="modal-box"><div class="modal-head"><h2 id="mEnT" data-i18n="Esto es lo que saldría hacia tu proveedor de IA">Esto es lo que saldría hacia tu proveedor de IA</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><div id="envioInfo"></div><pre class="fa-pre" id="envioTxt"></pre><label class="fa-chk" style="margin:12px 0"><input type="checkbox" id="envioOk"> <span data-i18n="f.envio.chk">He revisado la muestra y confirmo que puede salir de mi ordenador.</span></label><div class="actions"><button class="btn btn-primary" id="envioSi" type="button" disabled data-i18n="s.enviar">Enviar</button><button class="btn btn-ghost" id="envioNo" type="button" data-i18n="Cancelar">Cancelar</button></div></div></div></div>
+<div class="modal" id="mHelp" role="dialog" aria-modal="true" aria-labelledby="mHelpT"><div class="modal-box"><div class="modal-head"><h2 id="mHelpT" data-i18n="Ayuda">Ayuda</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><div class="glos" id="glos"></div></div></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>

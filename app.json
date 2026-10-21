@@ -1,0 +1,77 @@
+{
+  "slug": "tuitia",
+  "name": "TuitIA",
+  "tagline": "Presentaciones de clase con los tuits que refuerzan tu guion",
+  "eyebrow": "Docencia con tuits verificados · Universidad Miguel Hernández de Elche",
+  "h1": "Tu guion de clase, *reforzado con tuits reales*",
+  "lede": "Pega el guion de tu clase: la IA separa sus ideas y te propone dónde buscar en X los tuits que las refuerzan. El código comprueba que cada tuit existe y dice lo que la IA afirma, y monta las diapositivas para presentar o descargar en PowerPoint.",
+  "logo_icon": "chat",
+  "ia": true,
+  "lang": "es",
+  "langs": [
+    "es",
+    "en",
+    "pt"
+  ],
+  "modules": [
+    "00-utils",
+    "10-persist",
+    "20-providers",
+    "30-verify",
+    "40-extract",
+    "60-nav",
+    "65-i18n",
+    "70-report"
+  ],
+  "app_js": [
+    "tuits.js",
+    "pptx.js",
+    "app.js"
+  ],
+  "connect_extra": [
+    "https://api.fxtwitter.com",
+    "https://api.vxtwitter.com",
+    "https://cdn.syndication.twimg.com",
+    "https://pbs.twimg.com",
+    "https://video.twimg.com",
+    "https://abs.twimg.com",
+    "https://api.microlink.io",
+    "https://*.microlink.io",
+    "https://api.screenshotone.com",
+    "https://api.apiflash.com"
+  ],
+  "i18n": {
+    "en": {
+      "title": "TuitIA · Class presentations with the tweets that back up your script",
+      "eyebrow": "Teaching with verified tweets · Miguel Hernández University of Elche",
+      "h1": "Your lesson script, *backed by real tweets*",
+      "lede": "Paste your lesson script: the AI splits it into ideas and suggests where to search X for tweets that support them. The code checks that each tweet exists and says what the AI claims, and builds the slides to present or download as PowerPoint."
+    },
+    "pt": {
+      "title": "TuitIA · Apresentações de aula com os tweets que reforçam o seu guião",
+      "eyebrow": "Docência com tweets verificados · Universidade Miguel Hernández de Elche",
+      "h1": "O seu guião de aula, *reforçado com tweets reais*",
+      "lede": "Cole o guião da sua aula: a IA separa as suas ideias e propõe onde procurar no X os tweets que as reforçam. O código verifica que cada tweet existe e diz o que a IA afirma, e monta os diapositivos para apresentar ou descarregar em PowerPoint."
+    }
+  },
+  "authors": [
+    {
+      "name": "Fernando Borrás Rocher",
+      "orcid": "0000-0002-5519-4573",
+      "affiliation": "Universidad Miguel Hernández de Elche"
+    }
+  ],
+  "idea_credit": "",
+  "catalog": {
+    "cat": "doc",
+    "icon": "ti-brand-x",
+    "sub_es": "Presentaciones de clase con tuits que refuerzan tu guion",
+    "sub_en": "Class presentations with tweets that back up your script",
+    "desc_es": "Pegas el guion de una clase y la IA lo divide en ideas y propone búsquedas en X para cada una. El código comprueba que cada tuit existe y que la cita que da la IA aparece en él; las imágenes de los tuits se generan en el navegador o con una API de capturas con tu clave gratuita. Presentación a pantalla completa y descarga en PowerPoint y PDF. Español, inglés y portugués.",
+    "desc_en": "Paste a lesson script and the AI splits it into ideas and proposes X searches for each. The code checks that every tweet exists and that the AI's quote appears in it; tweet images are drawn in the browser or taken with a screenshot API using your free key. Full-screen presentation and PowerPoint and PDF download. Spanish, English and Portuguese.",
+    "tit_es": "Todas las titulaciones",
+    "tit_en": "All degrees",
+    "comp_es": "Preparación de clases · Alfabetización mediática · Análisis del discurso",
+    "comp_en": "Lesson preparation · Media literacy · Discourse analysis"
+  }
+}

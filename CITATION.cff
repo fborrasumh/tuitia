@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Si usas este software, cítalo con estos metadatos."
+title: "TuitIA"
+type: software
+authors:
+  - family-names: "Borrás Rocher"
+    given-names: "Fernando"
+    affiliation: "Universidad Miguel Hernández de Elche"
+    orcid: "https://orcid.org/0000-0002-5519-4573"
+version: "1.0.0"
+date-released: "2026-10-21"
+url: "https://fborrasumh.github.io/tuitia/"
+repository-code: "https://github.com/fborrasumh/tuitia"
+license: MIT
